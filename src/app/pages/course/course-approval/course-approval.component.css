@@ -1,0 +1,253 @@
+.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #F8F8F8;
+    width: 100%;
+    min-width: 1440px;
+    min-height: 1189px;
+    display: block;
+    z-index: -10;
+    align-items: center;
+    font-family: 'Open Sans';
+
+}
+
+.top {
+    margin-top: 105px;
+    margin-left: 295px;
+}
+
+.top h1, .top div {
+    display: inline;
+    font-family: 'Open Sans';
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 38px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.top h1 {
+    position: relative;
+    top: 10px;
+    left: 60px;
+    font-family: 'Open Sans';
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 38px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+
+.top .search-bar {
+    display: inline-flex;
+    width: 295px;
+    height: 37px;
+    padding: 0px 15px;
+    align-items: center;
+    gap: 176px;
+    flex-shrink: 0;    
+    border-radius: 12px;
+    border: 0.3px solid #D8D7D7;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin-left: 103px;
+    position: relative;
+    top: 7px;
+}
+
+.top .search-bar input {
+    color: #B4B3B3;
+    font-size: 14px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border: none;
+    width: 200px;
+}
+
+.top .search-bar input:focus {
+    outline: none;
+}
+
+.top .search-bar img {
+    display: inline;
+    position: relative;
+    left: -133px;
+}
+
+button {
+    font-family: 'Open Sans';
+}
+
+.top .buttons {
+    margin-left: 150px;
+}
+
+#export {
+    margin-left: 30px;
+    display: inline-flex;
+    width: 157.689px;
+    height: 41px;
+    padding: 8px 21px;
+    justify-content: center;
+    align-items: center;
+    gap: 11px;
+    flex-shrink: 0;
+    border-radius: 9px;
+    background: #FFAE3B;
+    color: #FFF;
+    font-size: 20px;
+    border: none;
+    position: relative;
+    top: 8px;
+    left: -20px;
+    box-shadow: none;
+}
+
+#export p {
+    position: relative;
+    top: 5px;
+}
+
+#export img {
+    display: inline-block;
+    margin-left: 10px;
+    position: relative;
+    top: -1px;
+}
+
+#input {
+    display: block;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+.list-container {
+    width: 1095px;
+    height: 203px;
+    flex-shrink: 0;
+    border-radius: 35px;
+    background: #FFF;
+    margin-top: 30px;
+    margin-left: 295px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+}
+
+.list-container .header {
+    width: 1095px;
+    height: 83px;
+    flex-shrink: 0;
+    border-radius: 28px 28px 0px 0px;
+    background: #EBEBEB;
+    padding-left: 50px; 
+}
+
+.list-container .header p {
+    display: inline-flex;
+    width: 150px;
+    height: fit-content;
+    color: rgba(0, 0, 0, 0.68);
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 30px; 
+    font-size: 18px;
+    font-family: 'Open Sans';
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 180px 160px 200px 200px 190px 20px;
+}
+
+.list-container .header .header-item {
+    display: inline;
+}
+
+.items-box {
+    width: 1095px;
+    height: fit-content;
+}
+
+.item {
+    display: grid;
+    grid-template-columns: 190px 160px 200px 180px 260px 20px;
+    padding-left: 50px;
+    margin-top: 30px;
+    padding-bottom: 10px;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.10);
+    height: 90px;
+    font-family: 'Open Sans';
+}
+
+.item p {
+    color: #252F40;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.36px;
+    width: 120px;
+    font-family: 'Open Sans';
+}
+
+.bottom-buttons button {
+    display: flex;
+    width: 114px;
+    height: 37px;
+    padding: 0px 14px;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 1px solid #526D82;
+    background: #FFF;   
+    font-family: 'Open Sans';
+    display: inline-block;
+    margin-left: 20px;
+}
+
+#submit {
+    margin-left: 625px;
+    background: #526D82;
+    color: #FFF;
+}
+
+.topper {
+    display: block;
+    width: 100%;
+}
+
+button {
+    display: inline-block;
+    width: 114px;
+    height: 37px;
+    padding: 0px 14px;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 1px solid #526D82;
+    background: #FFF;
+    margin-left: -76px;
+    margin-top: -8px;
+    background-color: #526D82;
+    color: #FFF;
+    
+}
+
+#submit {
+    margin-top: -5px;
+    float: right;
+    background-color: #526D82;
+    color: #FFF;
+}
