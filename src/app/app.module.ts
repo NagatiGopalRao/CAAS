@@ -10,6 +10,10 @@ import { CourseListComponent } from './pages/course/List/course-list/course-list
 import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { TabsComponent } from './components/side-bar/tabs/tabs.component';
 import { SubTabsComponent } from './components/side-bar/tabs/sub-tabs/sub-tabs.component';
+import { ProfileBannerComponent } from './pages/Banner/profile-banner/profile-banner.component';
+import { InstructorBannerComponent } from './pages/Banner/instructor-banner/instructor-banner.component';
+import { StudentBannerComponent } from './pages/Banner/student-banner/student-banner.component';
+import { CourseApprovalComponent } from './pages/course/course-approval/course-approval.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,11 @@ import { SubTabsComponent } from './components/side-bar/tabs/sub-tabs/sub-tabs.c
     CourseListComponent,
     SideBarComponent,
     TabsComponent,
-    SubTabsComponent
+    SubTabsComponent,
+    ProfileBannerComponent,
+    InstructorBannerComponent,
+    StudentBannerComponent,
+    CourseApprovalComponent
   ],
   imports: [
     BrowserModule,
