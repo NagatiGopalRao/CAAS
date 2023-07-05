@@ -1,0 +1,120 @@
+.container{
+    width: 1069px;
+    height: 855px;
+    flex-shrink: 0;
+    border-radius: 38px;
+    border: 1px solid #7E7E7E;
+    background: #FFF;
+    margin-top: 105px;
+    margin-left: 295px;
+    /* margin-bottom: 40px; */
+    /* margin-right: 40px; */
+}
+.container h5{
+    margin: 30px;
+    text-align: center;
+    font-size: 28px;
+    font-family: 'Nunito';
+    font-weight: 500;
+}
+#parent {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: -15px;
+  }
+  img{
+    padding-left: 20px;
+
+  }
+  #child {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: -15px;
+    margin-top: 10px;
+  }
+  p{
+    padding-left: 35px;
+  }
+  .row{
+    display: flex;
+    flex-direction: row;
+margin-left: 20px;
+margin-top: 20px;
+  }
+  label{
+    padding-left: 10px;
+  }
+  input{
+    border: 1px solid #7E7E7E;
+    width: 417px;
+    height: 47px;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding-left: 20px;
+  }
+  .col-3 input{
+    border: 1px solid #7E7E7E;
+    width: 200px;
+    height: 47px;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding-left: 20px;
+  }
+  .col-2 input{
+    border: 1px solid #7E7E7E;
+    width: 150px;
+    height: 47px;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding-left: 20px;
+  }
+  
+  .detailed label{
+    padding-left: 40px;
+    padding-top: 20px;
+  }
+  .detailed input{
+    border: 1px solid #7E7E7E;
+    width: 90%;
+    height: 100px;
+    margin-top: 10px;
+    margin-left: 30px;
+    border-radius: 10px;
+  }
+  #dropdown{
+    border: 1px solid #7E7E7E;
+    width: 417px;
+    height: 47px;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding-left: 20px;
+    background-image: url("/assets/drop-down.svg");
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: 10px;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+  }
+  #next {
+    margin-left: -35px;
+    margin-top: 20px;
+    background: #526D82;
+    border: none;
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    color: #FFF;
+}
+#back {
+    margin-left: 35px;
+    margin-top: 20px;
+    background: #FFF;
+    border: 1px solid #000000;
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    color: black;
+}

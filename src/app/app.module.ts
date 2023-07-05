@@ -13,6 +13,7 @@ import { SubTabsComponent } from './components/side-bar/tabs/sub-tabs/sub-tabs.c
 import { ProfileBannerComponent } from './pages/Banner/profile-banner/profile-banner.component';
 import { InstructorBannerComponent } from './pages/Banner/instructor-banner/instructor-banner.component';
 import { StudentBannerComponent } from './pages/Banner/student-banner/student-banner.component';
+import { CourseList2Component } from './pages/course/List/course-list2/course-list2.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { StudentBannerComponent } from './pages/Banner/student-banner/student-ba
     SubTabsComponent,
     ProfileBannerComponent,
     InstructorBannerComponent,
-    StudentBannerComponent
+    StudentBannerComponent,
+    CourseList2Component
   ],
   imports: [
     BrowserModule,
