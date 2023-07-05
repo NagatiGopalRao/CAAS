@@ -10,4 +10,5 @@ export class CourseListComponent {
   moveNext() {
     this.next = !this.next;
   }
+  
 }

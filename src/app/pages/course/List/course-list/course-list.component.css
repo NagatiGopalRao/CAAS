@@ -70,7 +70,37 @@ margin-top: 20px;
     border-radius: 10px;
     padding-left: 20px;
   }
-  
+  .form-check{
+    margin-left: 30px;
+  }
+  .form-check2{
+    margin-left: 30px;
+  }
+  .form-check input{
+    border: 1px solid #7E7E7E;
+    width: 20px;
+    height: 20px;
+    margin-top: 20px;
+    /* border-radius: 10px; */
+    padding-left: 20px;
+  }
+  .form-check-label{
+    padding-left: 10px;
+    padding-top: 15px;
+  }
+  .form-check2 input{
+    border: 1px solid #7E7E7E;
+    width: 20px;
+    height: 20px;
+    margin-top: -36px;
+    /* border-radius: 10px; */
+    margin-left: 75px;
+  }
+  .form-check2-label{
+    position: absolute;
+    margin-left: 100px;
+    margin-top: -64px;
+  }
   .detailed label{
     padding-left: 40px;
     padding-top: 20px;
