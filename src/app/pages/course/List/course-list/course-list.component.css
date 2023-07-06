@@ -1,0 +1,26 @@
+.table {
+    /* border: 2px solid #000; */
+    border-radius: 10%;
+}
+.table th, td{
+padding: 20px;
+}
+
+.card {
+    border-radius: 26px;
+}
+
+
+
+.bg-col {
+    background-color: red;
+    color: white;
+}
+.bdr {
+    border-radius: 26px;
+    overflow: hidden;
+}
+.btn-color {
+background-color: #FFAE3B;
+color: #fff;
+}
