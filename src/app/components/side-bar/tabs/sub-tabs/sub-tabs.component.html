@@ -1,1 +1,8 @@
-<p>sub-tabs works!</p>
+<a style="text-decoration: none; color: black;" [ngStyle]="{'color' : sub.type === 'selected'? 'white' : 'black'}" [routerLink]="tab.title + '/' + sub.title">
+    <div [id]="sub.type" class="sub-tab" (click)="select()">
+        <div class="course-icon">
+            <img class="icon" src={{tab.iconsrc}} alt="home-icon">
+        </div>
+        <h1>{{sub.title}}</h1>
+    </div>
+</a>

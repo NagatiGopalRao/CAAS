@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,7 +14,7 @@ import { SubTabsComponent } from './components/side-bar/tabs/sub-tabs/sub-tabs.c
 import { ProfileBannerComponent } from './pages/Banner/profile-banner/profile-banner.component';
 import { InstructorBannerComponent } from './pages/Banner/instructor-banner/instructor-banner.component';
 import { StudentBannerComponent } from './pages/Banner/student-banner/student-banner.component';
-import { CourseList2Component } from './pages/course/List/course-list2/course-list2.component';
+import { CourseApprovalComponent } from './pages/course/course-approval/course-approval.component';
 
 @NgModule({
   declarations: [
@@ -28,11 +29,12 @@ import { CourseList2Component } from './pages/course/List/course-list2/course-li
     ProfileBannerComponent,
     InstructorBannerComponent,
     StudentBannerComponent,
-    CourseList2Component
+    CourseApprovalComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule, 
   ],
   providers: [],
   bootstrap: [AppComponent]
