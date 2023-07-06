@@ -1,1 +1,110 @@
-<p>course-list works!</p>
+<div class="container mt-5 text-center h-100 ">
+    <div class="row mt-5">
+        <div class="col ">
+            <h1 class="courses">Course Listing :</h1>
+        </div>
+        <div class="col  mt-2">
+            <div class="input-group">
+                <input type="text" class="form-control rounded-3 shadow" placeholder="Search">
+                <!-- <i class="fa fa-search"></i> -->
+              </div>
+        </div>
+        <div class="col   mt-2">
+            <div class="d-flex gap-5 justify-content-end ">
+                <div class="">
+                    <button class="rounded-circle border border-danger py-1 shadow" data-bs-toggle="tooltip" data-bs-html="true" title="List View">
+                        <img src="/assets/course/list-icon.svg" alt="List">
+                    </button></div>
+                <div>
+                    <select class="form-select border-danger shadow" >
+                    <option selected>Show: All</option>
+                    <option value="1" >One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-8">
+            <div class="d-flex justify-content-evenly">
+                <div class="input-group mb-3 w-25">
+                    <select class="form-select border-danger shadow" >
+                      <option selected>Main Category</option>
+                      <option value="1">Aviation Management</option>
+                      <option value="2">Airport Fire Safety</option>
+                      <option value="3">Airport Fire Safety</option>
+                    </select>
+                  </div>
+                  <div class="input-group mb-3 w-25">
+                    <select class="form-select border-danger shadow" >
+                      <option selected>Sub Category</option>
+                      <option value="1">Aviation</option>
+                      <option value="2">Fire Safety</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                  <div class="input-group mb-3 w-25">
+                    <select class="form-select border-danger shadow" >
+                      <option selected>Status</option>
+                      <option value="1">Active</option>
+                      <option value="2">InCtive</option>
+                    </select>
+                  </div>
+
+            </div>
+        </div>
+        <div class="col-4 text-end">
+            <button type="button"  class="btn btn-color px-4 shadow" >
+               Export  <i class="fa fa-folder"></i>
+              </button>
+        </div>
+    </div>
+
+        <div class="card shadow bg-body mt-5">
+            <div class="card-body p-0 m-0 rounded-6">
+                <div class="tbl-container bdr"> 
+                  <div class="table-responsive">
+                    <table class="table">
+                      <thead class="table-secondary ">
+                        <tr >
+                          <th scope="col">Course Name</th>
+                          <th scope="col">Course Code</th>
+                          <th scope="col">Sc Code</th>
+                          <th scope="col">Hours</th>
+                          <th scope="col">Days</th>
+                          <th scope="col">Main Category</th>
+                          <th scope="col">Sub Category</th>
+                          <th scope="col">WBS</th>
+                          <th scope="col">Fees</th>
+                          <th scope="col">Status</th>
+                          <th scope="col">Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let item of items">
+                          <td>{{item.coursename}}</td>
+                          <td>{{item.CourseCode}}</td>
+                          <td>{{item.Sccode}}</td>
+                          <td>{{item.hours}}</td>
+                          <td>{{item.days}}</td>
+                          <td>{{item.MianCat}}</td>
+                          <td>{{item.subCate}}</td>
+                          <td>{{item.Wbs}}</td>
+                          <td>{{item.fees}}</td>
+                          <td class="text-success">{{item.status}}</td>
+                          <td><button  class="rounded-circle border-0 py-1 px-2"><img class="mb-1" src="/assets/course/ellipses.svg" alt="ellipses"></button></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+
+
+
