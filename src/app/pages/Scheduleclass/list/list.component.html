@@ -1,0 +1,61 @@
+<div class="container" *ngIf="!edit">
+    <div class="title">
+        <div class="row">
+            <div class="col-md-4">
+                <h5>Schedule Class Listing:</h5>
+            </div>
+            <div class="col-md-5">
+                <p>05</p>
+            </div>
+            <div class="col-md-2">
+                <input type="file" id="input" name="somename" size="chars">
+                <button id="export" (click)="upload()">
+                    <p style="display: inline-block;">Export</p>
+                    <img src="/assets/logo/download folder.svg" alt="icon">
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="form-container">
+        <div class="table">
+            <div class="header">
+                <p *ngFor="let h of headeritems">{{h}}</p>
+            </div>
+            <div class="item" *ngFor="let item of items">
+                <div class="course-name">
+                    <p>{{item.coursename}}</p>
+                </div>
+                <div class="start-date">
+                    <p>{{item.startdate}}</p>
+                </div>
+                <div class="end-date">
+                    <p>{{item.enddate}}</p>
+                </div>
+                <div class="option">
+                    <div class="dropdown" *ngIf="item.optselected">
+                        <div class="tab" (click)="toggleEdit()">
+                            <img src="/assets/logo/Pencil.svg" alt="pencil">
+                            <p>Edit</p>
+                        </div>
+                        <div class="tab">
+                            <img src="/assets/logo/Recycle Bin.svg" alt="delete">
+                            <p>Delete</p>
+                        </div>
+                        <div class="tab">
+                            <img src="/assets/logo/people.svg" alt="person">
+                            <p>Attendance</p>
+                        </div>
+                    </div>
+                    <div (click)="selectopt(item)">
+                        <img src="/assets/logo/ellipses.svg" alt="ellipses"
+                            style="margin-top: 20px;margin-left: -290px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <div *ngIf="edit">
+    <app-edit-schedule *ngIf="partone" (goBack)="toggleEdit()" (goNext)="togglePart()"></app-edit-schedule>
+    <app-editschedule2 *ngIf="!partone" (goBack)="togglePart()" (goNext)="toggleEdit()"></app-editschedule2>
+</div> -->
