@@ -10,10 +10,8 @@ padding: 20px;
     border-radius: 26px;
 }
 
-
-
 .bg-col {
-    background-color: red;
+    background-color: rgb(129, 122, 122);
     color: white;
 }
 .bdr {
@@ -23,4 +21,8 @@ padding: 20px;
 .btn-color {
 background-color: #FFAE3B;
 color: #fff;
+}
+
+.top {
+    margin-top: 145px;
 }

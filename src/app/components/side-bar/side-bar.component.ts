@@ -1,7 +1,9 @@
 import { trigger, state, style, transition, animate } from '@angular/animations';
+import { Output, EventEmitter, HostListener } from '@angular/core';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
+declare var $: any 
 @Component({
   selector: 'app-side-bar',
   templateUrl: './side-bar.component.html',
@@ -20,7 +22,10 @@ import { Router } from '@angular/router';
   ]
 })
 export class SideBarComponent {
-  constructor(private router: Router) {}
+  @Output() newItemEvent = new EventEmitter<boolean>();
+  constructor(private router: Router) {
+    
+  }
   
   tabs = [{title: "Home", iconsrc: "/assets/home-icon.svg", selected: false, subs: []},
 {title: "Course", iconsrc: "/assets/course-icon.svg", selected: false, subs: [{title: "List", type: "none"}, {title: "Add", type: "none"},  {title: "Course Approval", type:"none"}, {title: "Course Kit", type: "none"}, {title: "Categories", type: "none"}]},
@@ -42,12 +47,24 @@ export class SideBarComponent {
  index = 0;
  collapsed = false;
 
+ @HostListener('window:resize', ['$event'])
+onResize(event: any) {
+  const needCollapse = event.target.innerWidth < 992
+  if(needCollapse!==this.collapsed) {
+    this.collapsed = needCollapse;
+    this.newItemEvent.emit(needCollapse);
+  }
+  
+}
+
  collapse() {
   this.collapsed = true;
+  this.newItemEvent.emit(true);
  }
 
  expand() {
   this.collapsed = false;
+  this.newItemEvent.emit(false);
  }
 
  clearSubTabStyling() {
@@ -57,4 +74,6 @@ export class SideBarComponent {
     }
   }
  }
+
+
 }

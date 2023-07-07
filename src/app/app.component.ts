@@ -9,5 +9,11 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'CAAS';
   
-  constructor(public router: Router){}
+  isSideBarcollapsed = false;
+  constructor(public router: Router){
+  }
+
+  setIsCollapsed(isCollapsed: boolean) {
+    this.isSideBarcollapsed = isCollapsed;
+  }
 }

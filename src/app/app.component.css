@@ -1,3 +1,17 @@
-.bg {
-background-color: blue;
+.main-panel {
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-top: 7rem;
+}
+
+.sidebar-container, .app-header-container {
+   position: absolute;
+   z-index: 100;
+   top: 0;
+}
+
+.app-header-container {
+    position: absolute !important;
+    z-index:  99 !important;
 }

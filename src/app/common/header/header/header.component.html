@@ -1,28 +1,69 @@
-<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-<div class="navbar">
-    <img id="caas-logo" src="/assets/caas-logo.svg" alt="logo">
-    <div class="search-bar">
-        <input type="text" placeholder="Search...">
-        <img src="/assets/header/magnifier.png" alt="search">
-    </div>
-    <div class="side">
-        <div class="notif">
-            <img src="/assets/header/bell.svg" alt="bell">
-        </div>
+<nav class="navbar navbar-expand-lg w-100">
+  <img id="caas-logo" src="/assets/caas-logo.svg" alt="logo">
+
+  <div class="d-none d-md-block search-bar">
+    <input type="text" placeholder="Search...">
+    <img src="/assets/header/magnifier.png" alt="search" />
+  </div>
+
+  <div class="d-flex align-items-center">
+  <img class="d-block d-md-none mx-2" src="/assets/header/magnifier.png" alt="search" />
+
+  <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  </div>
+
+
+  <div class="collapse navbar-collapse row mx-5">
+    <div class="col-2 offset-lg-4 offset-xl-4">
+      <div class="notif">
+        <img src="/assets/header/bell.svg" alt="bell">
         <div class="notif-number">
-             <p>5</p>   
+          <p>5</p>   
         </div>
-        <div class="profile">
-            <img id="pfp" src="/assets/header/pfp.png" alt="pfp">
-            <div class="name">
-                <h3>William</h3>
-                <p style="color:#D64E49;">System Administrator</p>
-            </div>
-            <img id="first" class="dropdown" src="/assets/header/dropdown.svg" alt="dropdown">
-        </div>
-        <div class="language">
-            <h3 id="lang">En</h3>
-            <img id="second" class="dropdown" src="/assets/header/dropdown.svg" alt="dropdown">
-        </div>
+      </div>
     </div>
-</div>
+    <div class="col-lg-3 offset-lg-2 offset-xl-0 col-xl-6">
+      <div class="profile d-flex align-items-center">
+        <img id="pfp" src="/assets/header/pfp.png" alt="pfp">
+        <div class="d-flex flex-column d-none d-xl-block">
+            <div class="name fs-6" title="William">William</div>
+            <div class="name sub-text">System Administrator</div>
+        </div>
+        <img id="first" class="dropdown" src="/assets/header/dropdown.svg" alt="dropdown">
+    </div>
+    </div>
+  </div>
+</nav>
+
+
+<!-- <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<div class="navbar w-100 d-flex align-items-center justify-content-between">
+    <img id="caas-logo" src="/assets/caas-logo.svg" alt="logo">
+    <div class="row">
+      <div class="search-bar col-lg-3">
+          <input type="text" placeholder="Search...">
+          <img src="/assets/header/magnifier.png" alt="search">
+      </div>
+      <div class="notif col-lg-1">
+          <img src="/assets/header/bell.svg" alt="bell">
+          <div class="notif-number">
+            <p>5</p>   
+        </div>
+      </div>
+      
+      <div class="profile col-lg-3">
+          <img id="pfp" src="/assets/header/pfp.png" alt="pfp">
+          <div class="name">
+              <h3>William</h3>
+              <p style="color:#D64E49;">System Administrator</p>
+          </div>
+          <img id="first" class="dropdown" src="/assets/header/dropdown.svg" alt="dropdown">
+      </div>
+      <div class="language col-lg-2">
+          <h3 id="lang">En</h3>
+          <img id="second" class="dropdown" src="/assets/header/dropdown.svg" alt="dropdown">
+      </div>
+    </div>
+</div> -->

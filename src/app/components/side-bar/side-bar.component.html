@@ -2,14 +2,11 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;700&display=swap" rel="stylesheet">
 <div class="bigger-container" [@slide]="collapsed">
-    <div class="container">
-        <div class="header">
+    <div class="nav-items-container">
+        <div class="d-flex align-items-center justify-content-between px-4">
             <img id="caas-logo" src="/assets/caas-logo.svg" alt="caas-logo">
-            <div class="sidebar-icon">
-                <img id="sidebar-icon" src="/assets/header-icon.svg" alt="header-icon" (click)="collapse()">
-            </div>
+            <img id="sidebar-icon" src="/assets/header-icon.svg" alt="header-icon" (click)="collapse()">
         </div>
-        <p id="title">Main Menu</p>
         <div class="tabs">
             <app-tab (selection)="clearSubTabStyling()"
             *ngFor="let tab of tabs; index as index" 
@@ -18,17 +15,16 @@
         </div>
     </div>
 </div>
-<div class="collapsed-container" [@slide]="!collapsed">
-    <div class="header">
-        <div class="sidebar-icon">
-            <img id="sidebar-icon" src="/assets/header-icon.svg" alt="header-icon" (click)="expand()" style="margin-left: 20px;">
-        </div>
-        <img id="collapsed-caas-logo" src="/assets/caas-logo.svg" alt="caas-logo">
-    </div>
+<div class="collapsed-container d-none d-md-block" [@slide]="!collapsed">
+    <img class="pt-5" src="/assets/header-icon.svg" alt="header-icon" (click)="expand()" style="margin-left: 20px;">
     <div class="tabs">
         <div class="red-icon" *ngFor="let tab of tabs">
             <a [routerLink]="tab.title"><img class="icon" src={{tab.iconsrc}} alt="home-icon"></a>
         </div>
     </div>
+</div>
+
+<div class="collapsed-container-sm" [@slide]="!collapsed">
+    <img class="pt-5" src="/assets/header-icon.svg" alt="header-icon" (click)="expand()" style="margin-left: 20px;">
 </div>
 

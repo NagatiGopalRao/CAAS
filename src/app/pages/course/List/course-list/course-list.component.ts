@@ -29,4 +29,7 @@ export class CourseListComponent {
   closePopup(){
     $('#exampleModal').modal('hide');
   }
+
+
+  
 }
