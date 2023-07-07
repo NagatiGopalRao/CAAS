@@ -28,9 +28,7 @@ import { ListComponent } from './pages/Scheduleclass/list/list.component';
     SubTabsComponent,
     ProfileBannerComponent,
     InstructorBannerComponent,
-    StudentBannerComponent,
-    CourseApprovalComponent,
-    ListComponent
+    StudentBannerComponent
   ],
   imports: [
     BrowserModule,
