@@ -1,112 +1,140 @@
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<div class="container" *ngIf="!next">
+<div class="container" style="margin-top: 105px;margin-left: 295px;">
     <h5>Edit Course Create</h5>
-    <div id="parent">
-        <div>
-            <img src="assets/RedNo.1.svg">
 
-        </div>
-        <div>
-            <img src="assets/Line.svg">
-        </div>
-        <div>
-            <img src="assets/No.2.svg">
 
-        </div>
-    </div>
-    <div id="child">
-        <div>
-            <p>Edit Course Create</p>
-        </div>
-
-        <div>
-            <p>Instructor & Lab</p>
-        </div>
-    </div>
-    <div class="form-container">
-        <form>
-            <div class="row">
-                <div class="col-xs-6 col-lg-6">
-                    <label>Course Name</label>
-                    <input type="text" placeholder="Search and Rescue Administrators">
-                </div>
-                <div class="col-xs-6 col-lg-6">
-                    <label>Course Code</label>
-                    <input type="text" placeholder="SRA9102">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-6 col-lg-6">
-                    <label>Main Category</label>
-                    <select id="dropdown" name="dropdown" style=" font-family: 'Nunito';">
-                        <option value="">Aviation Management</option>
-                        <option value="">Electronic Personal Communication</option>
-                        <option value="">Aviation Security</option>
-                        <option value="">Airport Fire Safety</option>
-                    </select>
-                </div>
-                <div class="col-xs-6 col-lg-6">
-                    <label>Sub Category</label>
-                    <select id="dropdown" name="dropdown" style=" font-family: 'Nunito';">
-                        <option value="">Aviation</option>
-                        <option value=""> Management</option>
-                    </select>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-3 col-lg-3">
-                    <label>Days</label>
-                    <input type="text" placeholder="05">
-                </div>
-                <div class="col-xs-3 col-lg-3">
-                    <label>Training</label>
-                    <input type="text" placeholder="10">
-                </div>
-                <div class="col-xs-2 col-lg-2">
-                    <label>Fees</label>
-                    <input type="text" placeholder="2750">
-                </div>
-                <div class="col-xs-1 col-lg-1">
-                    <label>Currency</label>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                        <p class="form-check-label" for="inlineCheckbox1" style="padding-left: 20px;">SGD</p>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                        <p class="form-check-label" for="inlineCheckbox2" style="padding-left: 20px;">USD</p>
-                    </div>
-                </div>
-
+    <div class="container border" style="border-radius: 38px;
+border: 1px solid #7E7E7E;">
+        <div id="parent">
+            <div>
+                <img src="assets/No.1.svg">
 
             </div>
+            <div>
+                <img src="assets/Line.svg">
+            </div>
+            <div>
+                <img src="assets/RedNo.2.svg">
+
+            </div>
+        </div>
+        <div id="child">
+            <div>
+                <p>Edit Course Create</p>
+            </div>
+
+            <div>
+                <p>Instructor & Lab</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <label>Course Name</label>
+                <div class="input-group mb-3">
+
+                    <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon"
+                        aria-describedby="button-addon1">
+                </div>
+            </div>
+            <div class="col-6">
+                <label>Course Code</label>
+                <div class="input-group mb-3">
+
+                    <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon"
+                        aria-describedby="button-addon1">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <label>Main Category</label>
+                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                    <option selected>Open this select menu</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+            </div>
+            <div class="col-6">
+                <label>Sub Category</label>
+                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                    <option selected>Open this select menu</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <label>Days</label>
+                <div class="input-group mb-3">
+
+                    <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon"
+                        aria-describedby="button-addon1">
+                </div>
+            </div>
+            <div class="col-3">
+                <label>Training</label>
+                <div class="input-group mb-3">
+
+                    <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon"
+                        aria-describedby="button-addon1">
+                </div>
+            </div>
+            <div class="col-2">
+                <label>Fees</label>
+                <div class="input-group mb-3">
+
+                    <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon"
+                        aria-describedby="button-addon1">
+                </div>
+            </div>
+            <div class="col-4">
+                <p style="font-weight: 500;">Currency</p>
+                <div class="form-check form-check-inline" style="margin-left: 30px;">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                    <label class="form-check-label" for="inlineCheckbox1">SGD</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                    <label class="form-check-label" for="inlineCheckbox2">USD </label>
+                </div>
+            </div>
+
+
             <div class="row">
-                <div class="col-xs-6 col-lg-6">
+                <div class="col-6">
                     <label>Skill Connect Code</label>
-                    <input type="text" placeholder="SRA91">
+                    <div class="input-group mb-3">
+
+                        <input type="text" class="form-control" placeholder=""
+                            aria-label="Example text with button addon" aria-describedby="button-addon1">
+                    </div>
                 </div>
-                <div class="col-xs-6 col-lg-6">
+                <div class="col-6">
                     <label>Description</label>
-                    <input type="text" placeholder="Search and Rescue Administration">
+                    <div class="input-group mb-3">
+
+                        <input type="text" class="form-control" placeholder=""
+                            aria-label="Example text with button addon" aria-describedby="button-addon1">
+                    </div>
                 </div>
             </div>
-            <div class="col-xs-12 col-lg-12">
+            <div class="col-12">
                 <label>Course Detailed Description</label>
-                <input type="text" name="course-detailed-description" id="course-detailed-description"
-                    placeholder="SRA91">
+                <div class="input-group mb-3">
+
+                    <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon"
+                        aria-describedby="button-addon1">
+                </div>
             </div>
             <div class="row">
-                <div class="col-xs-9 col-lg-9">
+                <div class="col-md-10">
                     <button id="back">Back</button>
                 </div>
-                <div class="col-xs-3 col-lg-3">
-                    <button (click)="moveNext()" id="next"> Next</button>
+                <div class="col-md-2">
+                    <button (click)="Next()" id="next">Next</button>
                 </div>
             </div>
-        </form>
+        </div>
     </div>
-</div>
-<div *ngIf="next">
-    <app-course-list2></app-course-list2>
-</div>

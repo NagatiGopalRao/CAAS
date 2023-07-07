@@ -1,4 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-course-list2',
@@ -28,7 +29,7 @@ export class CourseList2Component {
    * Convert Files list to normal array list
    * @param files (Files List)
    */
-   prepareFilesList(files: Array<any>) {
+  prepareFilesList(files: Array<any>) {
     for (const item of files) {
       item.progress = 0;
       this.files.push(item);
@@ -38,9 +39,10 @@ export class CourseList2Component {
   upload() {
     document.getElementById('input')?.click();
   }
-  back = false;
-  goBack() {
-    this.back = !this.back;
+  constructor(private router: Router) { }
+  Back() {
+    console.log("submitted!");
+    this.router.navigate(['/course/List/course-list']);
   }
 
   submit() {

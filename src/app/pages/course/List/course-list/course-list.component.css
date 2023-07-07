@@ -1,23 +1,5 @@
-.container {
-  width: 1069px;
-  height: fit-content;
-  flex-shrink: 0;
-  border-radius: 38px;
-  border: 1px solid #7E7E7E;
-  background: #FFF;
-  margin-top: 105px;
-  margin-left: 295px;
-  /* margin-bottom: 40px; */
-  /* margin-right: 40px; */
-}
-
-.container h5 {
-  margin-top: -40px;
-  margin-left: 5px;
-  text-align: left;
-  font-size: 28px;
-  font-family: 'Nunito';
-  font-weight: 500;
+.row {
+  margin-top: 10px;
 }
 
 #parent {
@@ -46,89 +28,15 @@ p {
   font-family: 'Nunito';
 }
 
-.row {
-  display: flex;
-  flex-direction: row;
-  margin-left: 20px;
-  margin-top: 20px;
-}
-
-label {
-  padding-left: 10px;
-  font-size: 20px;
-  font-family: 'Nunito';
-  font-weight: 400;
-}
-
-.col-xs-6 input {
-  border: 1px solid #7E7E7E;
-  width: 417px;
-  height: 47px;
-  margin-top: 10px;
-  border-radius: 10px;
-  padding-left: 20px;
-
-}
-
-.col-xs-3 input {
-  border: 1px solid #7E7E7E;
-  width: 200px;
-  height: 47px;
-  margin-top: 10px;
-  border-radius: 10px;
-  padding-left: 20px;
-
-}
-
-.col-xs-2 input {
-  border: 1px solid #7E7E7E;
-  width: 150px;
-  height: 47px;
-  margin-top: 10px;
-  border-radius: 10px;
-  padding-left: 20px;
-
-}
-
 input {
-
-  border: 1px solid #526D82;
-  font-family: 'Nunito';
+  margin-top: 5px;
 }
 
-.col-xs-12 label {
-  padding-left: 40px;
-  padding-top: 20px;
-}
-
-.col-xs-12 input {
-  border: 1px solid #7E7E7E;
-  width: 90%;
-  height: 100px;
+.form-select {
   margin-top: 10px;
-  margin-left: 35px;
-  border-radius: 10px;
-}
-
-#dropdown {
-  border: 1px solid #7E7E7E;
-  width: 417px;
-  height: 47px;
-  margin-top: 10px;
-  border-radius: 10px;
-  padding-left: 20px;
-  background-image: url("/assets/drop-down.svg");
-  background-repeat: no-repeat;
-  background-position-x: 95%;
-  background-position-y: 10px;
-  appearance: none;
-  -moz-appearance: none;
-  -webkit-appearance: none;
 }
 
 #next {
-  margin-left: 35px;
-  margin-top: 20px;
   margin-bottom: 20px;
   background: #526D82;
   border: none;
@@ -140,8 +48,6 @@ input {
 }
 
 #back {
-  margin-left: 35px;
-  margin-top: 20px;
   margin-bottom: 20px;
   background: #FFF;
   border: 1px solid #000000;

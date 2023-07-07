@@ -15,6 +15,7 @@ import { ProfileBannerComponent } from './pages/Banner/profile-banner/profile-ba
 import { InstructorBannerComponent } from './pages/Banner/instructor-banner/instructor-banner.component';
 import { StudentBannerComponent } from './pages/Banner/student-banner/student-banner.component';
 import { CourseApprovalComponent } from './pages/course/course-approval/course-approval.component';
+import {CourseList2Component} from './pages/course/List/course-list2/course-list2.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { CourseApprovalComponent } from './pages/course/course-approval/course-a
     ProfileBannerComponent,
     InstructorBannerComponent,
     StudentBannerComponent,
-    CourseApprovalComponent
+    CourseApprovalComponent,
+    CourseList2Component
   ],
   imports: [
     BrowserModule,

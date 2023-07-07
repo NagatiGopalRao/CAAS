@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-course-list',
@@ -6,9 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./course-list.component.css']
 })
 export class CourseListComponent {
-  next = false;
-  moveNext() {
-    this.next = !this.next;
+
+
+  constructor(private router: Router) { }
+
+  Next() {
+    console.log("Submitted!")
+    this.router.navigate(['/course/List/course-list2']);
   }
-  
+
+
 }
+
+
