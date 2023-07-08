@@ -3,6 +3,8 @@
     overflow-y: auto;
     overflow-x: hidden;
     padding-top: 7rem;
+    background: #F8F8F8;
+
 }
 
 .sidebar-container, .app-header-container {
