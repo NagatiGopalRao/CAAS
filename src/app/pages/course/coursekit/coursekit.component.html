@@ -9,7 +9,7 @@
             </div>
             <div class="col-3 text-end mt-2">
                 <button class="bg-light-subtle btn
-                border-danger shadow px-4 rounded-3 py-2 fw-bold" (click)="toggleList()">List Coursekit</button>
+                border-danger shadow px-4 rounded-3 py-2 fw-bold" (click)="toggleList()">{{list? 'Add' : 'List'}} Course Kit</button>
             </div>
             <div class="col-3 d-flex justify-content-evenly">
                 <button type="button"  class="btn btn-color mt-2 px-5 btn-bg text-white shadow" id="export">
@@ -25,8 +25,12 @@
                 <div class="row mb-3">
                     <div class="col-6">
                         <label for="" class="form-label">Course Name</label>
-                        <input type="text"
-                          class="form-control" name="coursename" id="coursename">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected></option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
                     </div>
                     <div class="col-6">
                         <label for="" class="form-label">Document Link</label>
@@ -38,12 +42,12 @@
                     <div class="col-6">
                         <label for="" class="form-label">Short Description</label>
                         <input type="text"
-                          class="form-control" name="coursename" id="coursename">
+                          class="form-control" name="coursename" id="coursename" style="height: 108px">
                     </div>
                     <div class="col-6">
                         <label for="" class="form-label">Long Description</label>
                         <input type="text"
-                          class="form-control" name="dl" id="dl">
+                          class="form-control" name="dl" id="dl" style="height: 108px">
                     </div>
                 </div>
                 <div class="row mb-3">
@@ -71,7 +75,7 @@
             <div class="card-body p-0 m-0 rounded-6">
               <div class="tbl-container bdr">
                 <div class="table-responsive">
-                  <table class="table">
+                  <table class="table" style="font-size: 13px;">
                     <thead class="table-secondary">
                       <tr>
                         <th scope="col" *ngFor="let header of headeritems">{{header}}</th>
@@ -82,8 +86,18 @@
                         <td>{{item.coursename}}</td>
                         <td>{{item.sd}}</td>
                         <td>{{item.ld}}</td>
-                        <td>{{item.dl}}</td>
-                        <td>{{item.vltitle}}</td>
+                        <td>
+                            <div class="dl-container" style="border: 0.3px solid #7A7A7A; border-radius: 20px; width: 224px; padding: 10px;">
+                                <a href="{{item.dl}}">{{item.dl}}</a>
+                                <img src="/assets/Link.svg" alt="" style="float: right;">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="vl-container" style="border: 0.3px solid #7A7A7A; border-radius: 20px; width: 184px; padding: 10px;">
+                                <p style="display: inline;">{{item.vltitle}}</p>
+                                <img style="display: inline; float: right;" src="/assets/video-icon.svg" alt="">
+                            </div>
+                        </td>
                         <td><button class="rounded-circle border-0 py-1 px-2" [ngStyle]="{'background':item.selectopt? '#D64E49' : '#EFEEEE'}"><img class="mb-1"
                               src="/assets/course/ellipses.svg" [ngStyle]="{'filter':item.selectopt? 'invert(100%)' : 'none'}" alt="ellipses" (click)="selectoption(item)"></button>
                               <div class="option">
@@ -99,10 +113,10 @@
                                 </div>
                             </div>
                             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="Edit Course Kit" aria-hidden="true">
-                                <div class="modal-dialog">
-                                  <div class="modal-content">
+                                <div class="modal-dialog modal-dialog-centered modal-lg">
+                                  <div class="modal-content rounded-4 p-4">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Edit Course Kit</h5>
+                                        <h3 class="modal-title" id="exampleModalLabel">Edit Course Kit</h3>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                       </div>
                                     <div class="modal-body">
@@ -111,8 +125,12 @@
                                                 <div class="row mb-3">
                                                     <div class="col-6">
                                                         <label for="" class="form-label">Course Name</label>
-                                                        <input type="text"
-                                                          class="form-control" name="coursename" id="coursename">
+                                                        <select class="form-select" aria-label="Default select example">
+                                                            <option selected></option>
+                                                            <option value="1">One</option>
+                                                            <option value="2">Two</option>
+                                                            <option value="3">Three</option>
+                                                        </select>
                                                     </div>
                                                     <div class="col-6">
                                                         <label for="" class="form-label">Document Link</label>
@@ -123,12 +141,12 @@
                                                 <div class="row mb-3">
                                                     <div class="col-6">
                                                         <label for="" class="form-label">Short Description</label>
-                                                        <input type="text"
+                                                        <input type="text" style="height: 108px"
                                                           class="form-control" name="coursename" id="coursename">
                                                     </div>
                                                     <div class="col-6">
                                                         <label for="" class="form-label">Long Description</label>
-                                                        <input type="text"
+                                                        <input type="text" style="height: 108px"
                                                           class="form-control" name="dl" id="dl">
                                                     </div>
                                                 </div>
