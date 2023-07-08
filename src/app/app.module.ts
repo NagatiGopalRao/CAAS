@@ -16,6 +16,7 @@ import { InstructorBannerComponent } from './pages/Banner/instructor-banner/inst
 import { StudentBannerComponent } from './pages/Banner/student-banner/student-banner.component';
 import { CourseApprovalComponent } from './pages/course/course-approval/course-approval.component';
 import { CategoryComponent } from './pages/course/category/category.component';
+import { CoursekitComponent } from './pages/course/coursekit/coursekit.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { CategoryComponent } from './pages/course/category/category.component';
     InstructorBannerComponent,
     StudentBannerComponent,
     CourseApprovalComponent,
-    CategoryComponent
+    CategoryComponent,
+    CoursekitComponent
   ],
   imports: [
     BrowserModule,
