@@ -25,15 +25,37 @@ img {
 
 p {
   padding-left: 35px;
-  font-family: 'Nunito';
+  font: 'Nunito';
 }
-
+label{
+  font: 'Nunito';
+  font-size: 20px;
+  font-weight: 500;
+}
 input {
   margin-top: 5px;
+  font: 'Nunito';
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .form-select {
   margin-top: 10px;
+  font: 'Nunito';
+  font-size: 16px;
+  font-weight: 400;
+}
+select{
+  width: 98%;
+  background-color: #FFF;
+  background-image: url("/assets/drop-down.svg");
+  background-repeat: no-repeat;
+  background-position-x: 99%;
+  background-position-y: 10px;
+  background-size: auto;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
 }
 
 #next {
@@ -44,7 +66,7 @@ input {
   height: 40px;
   border-radius: 5px;
   color: #FFF;
-  font-family: 'Nunito';
+  font: 'Nunito';
 }
 
 #back {
@@ -55,5 +77,5 @@ input {
   height: 40px;
   border-radius: 5px;
   color: black;
-  font-family: 'Nunito';
+  font: 'Nunito';
 }

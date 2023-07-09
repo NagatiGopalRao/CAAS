@@ -25,15 +25,27 @@ img {
 
 p {
   padding-left: 35px;
-  font-family: 'Nunito';
+  font: 'Nunito';
+  
+}
+label{
+  font: 'Nunito';
+  font-size: 20px;
+  font-weight: 500;
 }
 
 input {
   margin-top: 5px;
+  font: 'Nunito';
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .form-select {
   margin-top: 10px;
+  font: 'Nunito';
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .col-11 {
@@ -66,7 +78,18 @@ input {
   color: #252F40;
   font-size: 12px;
 }
-
+select{
+  width: 98%;
+  background-color: #FFF;
+  background-image: url("/assets/drop-down.svg");
+  background-repeat: no-repeat;
+  background-position-x: 99%;
+  background-position-y: 10px;
+  background-size: auto;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
 button {
   border: 0.3px solid #e1dfdf;
   width: 95%;
@@ -103,7 +126,7 @@ button {
   height: 40px;
   border-radius: 5px;
   color: #FFF;
-  font-family: 'Nunito';
+  font: 'Nunito';
 }
 
 #cancel {
@@ -115,7 +138,7 @@ button {
   height: 40px;
   border-radius: 5px;
   color: black;
-  font-family: 'Nunito';
+  font: 'Nunito';
 }
 
 #back {
@@ -127,5 +150,5 @@ button {
   height: 40px;
   border-radius: 5px;
   color: black;
-  font-family: 'Nunito';
+  font: 'Nunito';
 }

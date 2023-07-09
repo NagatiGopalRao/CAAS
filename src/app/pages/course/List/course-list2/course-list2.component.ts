@@ -42,7 +42,7 @@ export class CourseList2Component {
   constructor(private router: Router) { }
   Back() {
     console.log("submitted!");
-    this.router.navigate(['/course/List/course-list']);
+    this.router.navigate(['/course-list']);
   }
 
   submit() {

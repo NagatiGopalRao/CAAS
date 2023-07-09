@@ -13,7 +13,7 @@ export class CourseListComponent {
 
   Next() {
     console.log("Submitted!")
-    this.router.navigate(['/course/List/course-list2']);
+    this.router.navigate(['course-list2']);
   }
 
 

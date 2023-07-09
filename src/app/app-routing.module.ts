@@ -8,8 +8,8 @@ import {CourseList2Component} from './pages/course/List/course-list2/course-list
 const routes: Routes = [
   { path: '', component: CourseListComponent, canActivate: [canActivateChild]},
   { path: 'login', component: LoginComponent },
+  { path: 'course-list2', component: CourseList2Component},
   { path: '**', redirectTo: ''},
-  { path: 'course-list2', component: CourseList2Component}
 ];
 
 @NgModule({
