@@ -47,14 +47,18 @@
                                 <label for="" class="form-label">Class Type</label>
                                 <div class="row">
                                     <div class="selections">
-                                        <div class="tick" (click)="toggleCheck(0)">
-                                            <h1 *ngIf="pressed[0]" style="position: absolute; color:green; font-size: 20px; margin: 5px">&check;</h1>
+                                        <div class="col-md-6 col-xs-12">
+                                            <div class="tick" (click)="toggleCheck(0)">
+                                                <h1 *ngIf="pressed[0]" style="position: absolute; color:green; font-size: 20px; margin: 5px">&check;</h1>
+                                            </div>
+                                            <p style="font-size: 16px; margin-left: 5px;">Public</p>
                                         </div>
-                                        <p style="font-size: 16px; margin-left: 5px;">Public</p>
-                                        <div class="tick" style="margin-left: 20px;" (click)="toggleCheck(1)">
-                                            <h1 *ngIf="pressed[1]" style="position: absolute; color:green; font-size: 20px; margin: 5px">&check;</h1>
+                                        <div class="col-md-6 col-xs-12">
+                                            <div class="tick" (click)="toggleCheck(1)">
+                                                <h1 *ngIf="pressed[1]" style="position: absolute; color:green; font-size: 20px; margin: 5px">&check;</h1>
+                                            </div>
+                                            <p style="font-size: 16px; margin-left: 5px;">Private</p>
                                         </div>
-                                        <p style="font-size: 16px; margin-left: 5px;">Private</p>
                                     </div>
                                 </div>
                             </div>
@@ -90,22 +94,28 @@
                         <div class="row mb-3">
                             <label for="" class="form-label">Status</label>
                             <div class="selections">
-                                <div class="toggle">
-                                    <div class="switch-1">
-                                        <h1 *ngIf="!pressed[2] || !pressed[3]">&checkmark;</h1>
+                                <div class="col-md-2 col-xs-11">
+                                    <div class="toggle">
+                                        <div class="switch-1">
+                                            <h1 *ngIf="!pressed[2] || !pressed[3]">&checkmark;</h1>
+                                        </div>
+                                        <div class="switch-2">
+                                            <h1 *ngIf="pressed[2] && pressed[3]">&checkmark;</h1>
+                                        </div>
                                     </div>
-                                    <div class="switch-2">
-                                        <h1 *ngIf="pressed[2] && pressed[3]">&checkmark;</h1>
+                                </div>
+                                <div class="col-md-5 col-xs-11">
+                                    <div class="tick" (click)="toggleCheck(2)">
+                                        <h1 *ngIf="pressed[2]" style="position: absolute; color:green; font-size: 20px; margin: 5px">&check;</h1>
                                     </div>
+                                    <p style="font-size: 16px; margin-left: 5px;">Is Guaranteed to Run</p>
                                 </div>
-                                <div class="tick" (click)="toggleCheck(2)" style="margin-left: 50px;">
-                                    <h1 *ngIf="pressed[2]" style="position: absolute; color:green; font-size: 20px; margin: 5px">&check;</h1>
+                                <div class="col-md-4 col-xs-11">
+                                    <div class="tick" (click)="toggleCheck(3)">
+                                        <h1 *ngIf="pressed[3]" style="position: absolute; color:green; font-size: 20px; margin: 5px">&check;</h1>
+                                    </div>
+                                    <p style="font-size: 16px; margin-left: 5px;">External Room</p>
                                 </div>
-                                <p style="font-size: 16px; margin-left: 5px;">Is Guaranteed to Run</p>
-                                <div class="tick" style="margin-left: 70px;" (click)="toggleCheck(3)">
-                                    <h1 *ngIf="pressed[3]" style="position: absolute; color:green; font-size: 20px; margin: 5px">&check;</h1>
-                                </div>
-                                <p style="font-size: 16px; margin-left: 5px;">External Room</p>
                             </div>
                         </div>
                         <div class="row mb-3">
