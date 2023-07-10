@@ -8,8 +8,10 @@ import { EditCourseListComponent } from './pages/course/List/edit-course-list/ed
 import { EditCourseListSecondComponent } from './pages/course/List/edit-course-list-second/edit-course-list-second.component';
 import { CoursekitComponent } from './pages/course/coursekit/coursekit.component';
 import { ListComponent } from './pages/Scheduleclass/list/list.component';
+import { AddScheduleComponent } from './pages/schedule/add-schedule/add-schedule.component';
 import { ApprovalListComponent } from './pages/Scheduleclass/approval-list/approval-list.component';
 import { CompletionListComponent } from './pages/Scheduleclass/completion-list/completion-list.component';
+
 
 const routes: Routes = [
   { path: 'Course', component: CourseListComponent },
@@ -21,8 +23,12 @@ const routes: Routes = [
   { path: 'edit-course-list-second', component: EditCourseListSecondComponent},
   { path: 'Course/Course Approval', component: CourseApprovalComponent},
   { path: 'Schedule Class/List', component: ListComponent},
+
+  { path: 'Schedule Class/Add', component: AddScheduleComponent}
+
   { path: 'Schedule Class/Approve List', component: ApprovalListComponent},
   { path: 'Schedule Class/Completion List', component: CompletionListComponent},
+
 
 
   // { path: '**', redirectTo: ''}

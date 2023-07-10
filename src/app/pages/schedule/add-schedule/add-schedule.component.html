@@ -1,0 +1,199 @@
+<div class="container-fluid bg-light" style="font-family: 'Nunito'">
+    <div class="container top mt-4">
+        <div class="row">
+            <div class="card text-start mt-3 p-5 rounded-5">
+              <div class="container">
+                <div class="row text-center">
+                    <h4 style="position: relative; right: 20px;">Schedule Class Create</h4>
+                    <div class="row">
+                        <div class="row justify-content-center">
+                            <div class="col-2 p-0 d-flex justify-content-center">
+                                <div class="first">
+                                    <p>1</p>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <hr class="hr">
+                            </div>
+                            <div class="col-2 d-flex justify-content-center">
+                                <div class="second">
+                                    <p>2</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center" style="font-size: 1vw;">
+                            <div class="col-6">
+                                <p style="margin-left: 4vw;">Course</p>
+                            </div>
+                            <div class="col-6">
+                                <p style="margin-right: 4vw;">Instructor & Lab</p>   
+                            </div>
+                        </div>   
+                    </div>
+                </div>
+                <div class="row" *ngIf="pageone">
+                    <form>
+                        <div class="row mb-3">
+                            <div class="col-7">
+                                <label for="" class="form-label">Course Name</label>
+                                <select name="coursename" ngModel class="form-select" aria-label="Default select example">
+                                    <option selected></option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                            <div class="col-5">
+                                <label for="" class="form-label">Class Type</label>
+                                <div class="row">
+                                    <div class="selections">
+                                        <div class="col-md-6 col-xs-12">
+                                            <div class="tick" (click)="toggleCheck(0)">
+                                                <h1 *ngIf="pressed[0]" style="position: absolute; color:green; font-size: 20px; margin: 5px">&check;</h1>
+                                            </div>
+                                            <p style="font-size: 16px; margin-left: 5px;">Public</p>
+                                        </div>
+                                        <div class="col-md-6 col-xs-12">
+                                            <div class="tick" (click)="toggleCheck(1)">
+                                                <h1 *ngIf="pressed[1]" style="position: absolute; color:green; font-size: 20px; margin: 5px">&check;</h1>
+                                            </div>
+                                            <p style="font-size: 16px; margin-left: 5px;">Private</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-7">
+                                <label for="" class="form-label">Class Delivery</label>
+                                <select name="coursename" ngModel class="form-select" aria-label="Default select example">
+                                    <option selected></option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                            <div class="col-5">
+                                <label for="" class="form-label">Instructor Cost</label>
+                                <input type="text" ngModel
+                                class="form-control" name="sd" id="coursename">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-7">
+                                <label for="" class="form-label">Maximum Enrollment</label>
+                                <input type="text" ngModel
+                                class="form-control" name="sd" id="coursename">
+                            </div>
+                            <div class="col-5">
+                                <label for="" class="form-label">Minimum Enrollment</label>
+                                <input type="text" ngModel
+                                class="form-control" name="sd" id="coursename">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="" class="form-label">Status</label>
+                            <div class="selections">
+                                <div class="col-md-2 col-xs-11">
+                                    <div class="toggle">
+                                        <div class="switch-1">
+                                            <h1 *ngIf="!pressed[2] || !pressed[3]">&checkmark;</h1>
+                                        </div>
+                                        <div class="switch-2">
+                                            <h1 *ngIf="pressed[2] && pressed[3]">&checkmark;</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-5 col-xs-11">
+                                    <div class="tick" (click)="toggleCheck(2)">
+                                        <h1 *ngIf="pressed[2]" style="position: absolute; color:green; font-size: 20px; margin: 5px">&check;</h1>
+                                    </div>
+                                    <p style="font-size: 16px; margin-left: 5px;">Is Guaranteed to Run</p>
+                                </div>
+                                <div class="col-md-4 col-xs-11">
+                                    <div class="tick" (click)="toggleCheck(3)">
+                                        <h1 *ngIf="pressed[3]" style="position: absolute; color:green; font-size: 20px; margin: 5px">&check;</h1>
+                                    </div>
+                                    <p style="font-size: 16px; margin-left: 5px;">External Room</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-6">
+                                <button id="back">Back</button>
+                            </div>
+                            <div class="col-6 text-end">
+                                <button id="submit" (click)="togglePage()">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="row" *ngIf="!pageone">
+                    <div class="row">
+                        <div class="col-6">
+                            <h5>Assign Instructor & Lab Schedule</h5>
+                        </div>
+                        <div class="col-6 text-end">
+                            <button id="add" (click)="addItem()" class="rounded-4">
+                                <img src="/assets/Close.svg" alt="plus">
+                                <p>Add</p>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="card bg-body mt-3 mb-4">
+                            <div class="card-body p-0 m-0 rounded-2">
+                              <div class="tbl-container bdr">
+                                <div class="table-responsive">
+                                  <table class="table" style="font-size: 13px;">
+                                    <thead class="table-secondary">
+                                      <tr>
+                                        <th scope="col" *ngFor="let header of headeritems">{{header}}</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr *ngFor="let item of items; index as index">
+                                        <td>
+                                            <input type="datetime-local" name="start-date" id="start-date" class="form-control">
+                                        </td>
+                                        <td>
+                                            <input type="datetime-local" name="start-date" id="start-date" class="form-control">
+                                        </td>
+                                        <td>
+                                            <select name="coursename" ngModel class="form-select" aria-label="Default select example">
+                                                <option selected></option>
+                                                <option value="Timothy">Timothy</option>
+                                            </select>
+                                        </td>
+                                        <td><button class="rounded-circle border-0 py-1 px-2" (click)="deleteItem(index)">
+                                            <img class="mb-1"
+                                              src="/assets/delete.svg"></button>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                    </div>
+                    <div class="row mb-3" style="margin-left: 10px;">
+                        <div class="col-md-6">
+                            <button id="back" (click)="togglePage()">Back</button>
+                        </div>
+                        <div class="col-md-6 text-end">
+                            <div class="row">
+                                <div class="col">
+                                    <button id="cancel" (click)="togglePage()">Cancel</button>
+                                </div>
+                                <div class="col">
+                                    <button type="submit" id="submit">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
