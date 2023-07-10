@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 declare var $: any 
 @Component({
@@ -7,8 +9,10 @@ declare var $: any
   styleUrls: ['./course-list.component.css']
 })
 export class CourseListComponent {
+  edit :boolean = false;
+  constructor(private router: Router){}
 
-  constructor(){}headeritems = ['Course Name', 'Course Code', 'Sc Code', 'Hours','Days','Main Category', 'Sub Category', 'WBS','Fees','Status','Action'];
+  headeritems = ['Course Name', 'Course Code', 'Sc Code', 'Hours','Days','Main Category', 'Sub Category', 'WBS','Fees','Status','Action'];
   items = [{coursename: 'Aviation Security Programme', CourseCode: 'SAP954', Sccode: 'SC0987',hours:'12',days:'3',MianCat:'Aviation Management',subCate:'Aviation',Wbs:'',fees:'1000',status:'Active', optselected: false},
 {coursename: 'Air Traffic Safety Electronics Personal Basic', CourseCode: 'SAP954', Sccode: 'SC0987',hours:'23',days:'5',MianCat:'Aviation Management',subCate:'Aviation',Wbs:'',fees:'1000',status:'Active', optselected: false},
 {coursename: 'ICAO PAN-OPS Instrument', CourseCode: 'SAP954', Sccode: 'SC0987',hours:'18',days:'5',MianCat:'Airport Fire Safety',subCate:'Fire Safety',Wbs:'',fees:'1000',status:'Active', optselected: false},
@@ -22,6 +26,10 @@ export class CourseListComponent {
     item.optselected = !item.optselected;
   }
 
+  editList() {
+    this.router.navigate(['edit-course-list']);
+  }
+
   openPopup(){
     console.log("`openPopup")
     $('#exampleModal').modal('show');
@@ -31,5 +39,7 @@ export class CourseListComponent {
   }
 
 
-  
+  toggleEdit() {
+    this.edit = !this.edit;
+  }
 }

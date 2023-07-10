@@ -28,8 +28,8 @@ export class SideBarComponent {
   }
   
   tabs = [{title: "Home", iconsrc: "/assets/home-icon.svg", selected: false, subs: []},
-{title: "Course", iconsrc: "/assets/course-icon.svg", selected: false, subs: [{title: "List", type: "none"}, {title: "Add", type: "none"},  {title: "Course Approval", type:"none"}, {title: "Course Kit", type: "none"}, {title: "Categories", type: "none"}]},
-{title: "Schedule Class", iconsrc: "/assets/schedule-icon.svg", selected: true, subs: [{title:"List", type: "selected"}, {title:"Add", type:"none"}, {title:"Approve List", type: "none"}, {title:"Completion List", type:"none"}]},
+{title: "Course", iconsrc: "/assets/course-icon.svg", selected: true, subs: [{title: "List", type: "none"}, {title: "Add", type: "none"},  {title: "Course Approval", type:"none"}, {title: "Course Kit", type: "none"}, {title: "Categories", type: "none"}]},
+{title: "Schedule Class", iconsrc: "/assets/schedule-icon.svg", selected: false, subs: [{title:"List", type: "selected"}, {title:"Add", type:"none"}, {title:"Approve List", type: "none"}, {title:"Completion List", type:"none"}]},
 {title: "Fellowship", iconsrc:"/assets/fellowship-icon.svg", selected: false, subs: []}, {title: "Survey", iconsrc:"/assets/survey-icon.svg", selected: false, subs: [{title: "List", type:"none"}]},
 {title: "Audit", selected: false, iconsrc: "/assets/audit-icon.svg", subs: [{title: "List", type:"none"}, {title: "E-Attendance", type:"none"}]}, {title: "Home Content", iconsrc: "/assets/home-content-icon.svg", selected: false, subs: []},
 {title: "Users", selected: false, iconsrc: "/assets/users-icon.svg", subs: [{title: "Type", type: "none"}, {title: "All User", type: "none"}]},

@@ -25,7 +25,12 @@ import { EditCourseListSecondComponent } from './pages/course/List/edit-course-l
 
 import { CoursekitComponent } from './pages/course/coursekit/coursekit.component';
 import { FormsModule } from '@angular/forms';
+
 import { AddScheduleComponent } from './pages/schedule/add-schedule/add-schedule.component';
+
+import { ApprovalListComponent } from './pages/Scheduleclass/approval-list/approval-list.component';
+import { CompletionListComponent } from './pages/Scheduleclass/completion-list/completion-list.component';
+
 
 
 @NgModule({
@@ -51,7 +56,12 @@ import { AddScheduleComponent } from './pages/schedule/add-schedule/add-schedule
     EditCourseListSecondComponent,
 
     CoursekitComponent,
+
      AddScheduleComponent,
+
+     ApprovalListComponent,
+     CompletionListComponent,
+
 
   ],
   imports: [

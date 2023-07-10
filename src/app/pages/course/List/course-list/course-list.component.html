@@ -98,8 +98,26 @@
                 <td>{{item.Wbs}}</td>
                 <td>{{item.fees}}</td>
                 <td class="text-success">{{item.status}}</td>
-                <td><button class="rounded-circle border-0 py-1 px-2"><img class="mb-1"
-                      src="/assets/course/ellipses.svg" alt="ellipses"></button></td>
+              <td>
+                <div class="option">
+                  <div class="dropdown" *ngIf="item.optselected">
+                    <div class="tab" (click)="editList()">
+                        <img src="/assets/pencil.svg" alt="pencil">
+                        <p>Edit</p>
+                    </div>
+                    <div class="tab">
+                        <img src="/assets/delete.svg" alt="delete">
+                        <p>Delete</p>
+                    </div>
+                    <div class="tab">
+                        <img src="/assets/people.svg" alt="person">
+                        <p>Attendance</p>
+                    </div>
+                  </div>
+                  <button class="rounded-circle border-0 py-1 px-2" (click)="selectopt(item)"><img class="mb-1"
+                    src="/assets/course/ellipses.svg" alt="ellipses"></button>
+                </div>
+                    </td> 
               </tr>
             </tbody>
           </table>
