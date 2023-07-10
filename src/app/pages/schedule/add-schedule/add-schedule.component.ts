@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./add-schedule.component.css']
 })
 export class AddScheduleComponent {
-  pageone = false;
+  pageone = true;
   pressed = [false, false, false, false];
   toggleCheck(num: number) {
     this.pressed[num] = !this.pressed[num];
