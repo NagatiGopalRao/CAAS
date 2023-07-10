@@ -1,0 +1,56 @@
+<div class="container-fluid">
+    <div class="row mt-5">
+      <div class="col-md-4">
+        <h2 class="courses">Completion List</h2>
+      </div>
+      <div class="col-md-4 mt-2">
+        <div class="input-group">
+          <input type="text" class="form-control rounded-3 shadow" placeholder="Search">
+        </div>
+      </div>
+      <div class="col-md-4 mt-2 ">
+        <div class="d-flex gap-5 justify-content-end ">
+           <div class="col-md text-end">
+            <button type="button" class="btn btn-color px-5 btn-bg text-white 
+          shadow">
+              Export <i class="fa fa-folder"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- table view -->
+    <div class="card shadow  bg-body mt-5">
+      <div class="card-body p-0 m-0 rounded-6">
+        <div class="tbl-container bdr">
+          <div class="table-responsive">
+            <table class="table text-center">
+              <thead class="table-secondary">
+                <tr>
+                  <th scope="col">Course Name</th>
+                  <th scope="col">Student Name</th>
+                  <th scope="col">Class Start Date</th>
+                  <th scope="col">Class End Date</th>
+                  <th scope="col">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of  list_items">
+                  <td>{{item.coursename}}</td>
+                  <td>{{item.student_name}}</td>
+                  <td>{{item.std}}</td>
+                  <td>{{item.cdd}}</td>
+                  <td>
+                            <button class="btn rounded-4 submit">Approve</button>
+                  </td>
+              
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- table view end -->
+  </div>
