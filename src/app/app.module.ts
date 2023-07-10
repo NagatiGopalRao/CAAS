@@ -25,6 +25,7 @@ import { EditCourseListSecondComponent } from './pages/course/List/edit-course-l
 
 import { CoursekitComponent } from './pages/course/coursekit/coursekit.component';
 import { FormsModule } from '@angular/forms';
+import { AddScheduleComponent } from './pages/schedule/add-schedule/add-schedule.component';
 
 
 @NgModule({
@@ -50,6 +51,7 @@ import { FormsModule } from '@angular/forms';
     EditCourseListSecondComponent,
 
     CoursekitComponent,
+     AddScheduleComponent,
 
   ],
   imports: [

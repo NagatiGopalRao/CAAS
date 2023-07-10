@@ -8,6 +8,7 @@ import { EditCourseListComponent } from './pages/course/List/edit-course-list/ed
 import { EditCourseListSecondComponent } from './pages/course/List/edit-course-list-second/edit-course-list-second.component';
 import { CoursekitComponent } from './pages/course/coursekit/coursekit.component';
 import { ListComponent } from './pages/Scheduleclass/list/list.component';
+import { AddScheduleComponent } from './pages/schedule/add-schedule/add-schedule.component';
 
 const routes: Routes = [
   { path: 'Course', component: CourseListComponent },
@@ -19,7 +20,7 @@ const routes: Routes = [
   { path: 'edit-course-list-second', component: EditCourseListSecondComponent},
   { path: 'Course/Course Approval', component: CourseApprovalComponent},
   { path: 'Schedule Class/List', component: ListComponent},
-
+  { path: 'Schedule Class/Add', component: AddScheduleComponent}
 
   // { path: '**', redirectTo: ''}
 ];
