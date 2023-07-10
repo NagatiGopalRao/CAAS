@@ -1,0 +1,152 @@
+<div class="container">
+    <h5>Edit Course Create</h5>
+
+    <div class="container border" style="border-radius: 38px;
+border: 1px solid #7E7E7E;">
+        <div id="parent">
+            <div>
+                <img src="assets/No.1.svg">
+
+            </div>
+            <div>
+                <img src="assets/Line.svg">
+            </div>
+            <div>
+                <img src="assets/RedNo.2.svg">
+
+            </div>
+        </div>
+        <div id="child">
+            <div>
+                <p>Edit Course Create</p>
+            </div>
+
+            <div>
+                <p>Instructor & Lab</p>
+            </div>
+        </div>
+
+        <div class="row rounded-3">
+            <div class="col-4">
+                <label>PDU Technical</label>
+                <div class="input-group mb-3">
+
+                    <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon"
+                        aria-describedby="button-addon1">
+                </div>
+
+            </div>
+            <div class="col-4">
+                <label>PDU Leadership</label>
+                <div class="input-group mb-3">
+
+                    <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon"
+                        aria-describedby="button-addon1">
+                </div>
+            </div>
+            <div class="col-4">
+                <label>PDU Startegic</label>
+                <div class="input-group mb-3">
+
+                    <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon"
+                        aria-describedby="button-addon1">
+                </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <label>Thumbnail</label>
+            <div class="col-11">
+                <input type="file" #fileDropRef id="fileDropRef" (change)="fileBrowseHandler($event.target)">
+
+                <img src="/assets/add image.svg" style="margin-top: 40px;">
+                <h3>Drag & Drop Image, or <label for="fileDropRef"
+                        style="background: none; color: #D64E49;">Browse</label></h3>
+                <p>Max 6 MB each, 12 MB for Videos</p>
+                <p style="display: inline;">Aspect Ratio 16: 9</p>
+                <p style="display: inline;">Recommended Size 1024 * 576</p>
+            </div>
+
+
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <label>Website Link</label>
+                <input type="file" id="input" name="somename" size="chars" class="form-control rounded-3 w-100"
+                    placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                <button class="button" type="button" id="export" (click)="upload()">Button</button>
+
+            </div>
+            <div class="col-6">
+                <label>Funding/Grant</label>
+                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                    <option selected>Open this select menu</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <label>Survey</label>
+                    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+                <div class="col-6">
+                    <label>Assign Instructors</label>
+                    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <label>Assign Exam</label>
+                    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+                <div class="col-6">
+                    <label>Assign Coursekit</label>
+                    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-12">
+                <label>Certificates</label>
+                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                    <option selected>Open this select menu</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+            </div>
+            <div class="row">
+                <div class="col-9">
+                    <button (click)="Back()" id="back">Back</button>
+                </div>
+                <div class="col-2">
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <button class="btn btn-primary me-md-2" type="button" id="cancel">Cancel</button>
+                        <button class="btn btn-primary" type="button" (click)="submit()" id="submit">Submit</button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>

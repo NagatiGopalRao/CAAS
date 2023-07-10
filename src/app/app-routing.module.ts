@@ -11,6 +11,7 @@ import { ListComponent } from './pages/Scheduleclass/list/list.component';
 import { AddScheduleComponent } from './pages/schedule/add-schedule/add-schedule.component';
 import { ApprovalListComponent } from './pages/Scheduleclass/approval-list/approval-list.component';
 import { CompletionListComponent } from './pages/Scheduleclass/completion-list/completion-list.component';
+import { ListSurveyComponent } from './pages/survey/list-survey/list-survey.component';
 
 
 const routes: Routes = [
@@ -24,10 +25,11 @@ const routes: Routes = [
   { path: 'Course/Course Approval', component: CourseApprovalComponent},
   { path: 'Schedule Class/List', component: ListComponent},
 
-  { path: 'Schedule Class/Add', component: AddScheduleComponent}
+  { path: 'Schedule Class/Add', component: AddScheduleComponent},
 
   { path: 'Schedule Class/Approve List', component: ApprovalListComponent},
   { path: 'Schedule Class/Completion List', component: CompletionListComponent},
+  { path: 'Survey/List', component: ListSurveyComponent}
 
 
 

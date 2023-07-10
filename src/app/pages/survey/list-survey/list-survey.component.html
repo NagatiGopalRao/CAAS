@@ -1,0 +1,59 @@
+<div class="container-fluid bg-light">
+    <div class="container top">
+        <div class="row mt-5">
+            <div class="col-7">
+                <h1 class="mx-5">Surveys</h1>
+            </div>
+            <div class="col-5">
+                <div class="row">
+                    <div class="col mt-2">
+                        <button id="toggle" class="bg-light-subtle btn
+                        border-danger shadow px-4 rounded-3 py-2 fw-bold">Create Survey</button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-color mt-2 px-5 btn-bg text-white shadow" id="export">
+                            Export <i class="fa fa-folder"></i></button>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="card shadow  bg-body mt-3">
+                <div class="card-body p-0 m-0 rounded-6">
+                  <div class="tbl-container bdr">
+                    <div class="table-responsive">
+                      <table class="table">
+                        <thead class="table-secondary">
+                          <tr>
+                            <th scope="col" *ngFor="let header of headeritems" style="padding-left: 13vw;">{{header}}</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let item of items; index as index">
+                            <td style="padding-left: 20%;">{{item.coursename}}</td>
+                            <td style="padding-left: 20%;">
+                                <button class="rounded-circle border-0 py-1 px-2" [ngStyle]="{'background':item.selectopt? '#D64E49' : '#EFEEEE'}"><img class="mb-1"
+                                    src="/assets/course/ellipses.svg" [ngStyle]="{'filter':item.selectopt? 'invert(100%)' : 'none'}" alt="ellipses" (click)="selectoption(item)"></button>
+                                    <div class="option">
+                                      <div class="dropdown" *ngIf="item.selectopt">
+                                          <div class="tab" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                              <img src="/assets/pencil.svg" alt="pencil">
+                                              <p>Edit</p>
+                                          </div>
+                                          <div class="tab">
+                                              <img src="/assets/delete.svg" alt="delete">
+                                              <p>Delete</p>
+                                          </div>
+                                      </div>
+                                  </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

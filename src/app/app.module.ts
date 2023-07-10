@@ -30,6 +30,7 @@ import { AddScheduleComponent } from './pages/schedule/add-schedule/add-schedule
 
 import { ApprovalListComponent } from './pages/Scheduleclass/approval-list/approval-list.component';
 import { CompletionListComponent } from './pages/Scheduleclass/completion-list/completion-list.component';
+import { ListSurveyComponent } from './pages/survey/list-survey/list-survey.component';
 
 
 
@@ -61,6 +62,7 @@ import { CompletionListComponent } from './pages/Scheduleclass/completion-list/c
 
      ApprovalListComponent,
      CompletionListComponent,
+     ListSurveyComponent,
 
 
   ],
