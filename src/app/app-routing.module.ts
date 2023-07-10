@@ -7,15 +7,20 @@ import { CategoryComponent } from './pages/course/category/category.component';
 import { EditCourseListComponent } from './pages/course/List/edit-course-list/edit-course-list.component';
 import { EditCourseListSecondComponent } from './pages/course/List/edit-course-list-second/edit-course-list-second.component';
 import { CoursekitComponent } from './pages/course/coursekit/coursekit.component';
+import { ListComponent } from './pages/Scheduleclass/list/list.component';
 
 const routes: Routes = [
-  { path: '', component: CoursekitComponent },
-  { path: 'Course', component: CourseListComponent},
+  { path: 'Course', component: CourseListComponent },
+  { path: 'Course/List', component: CourseListComponent},
   { path: 'Course/Course Kit', component: CoursekitComponent },
   { path: 'Course/Categories', component: CategoryComponent },
   { path: 'login', component: LoginComponent },
   { path: 'edit-course-list', component: EditCourseListComponent},
   { path: 'edit-course-list-second', component: EditCourseListSecondComponent},
+  { path: 'Course/Course Approval', component: CourseApprovalComponent},
+  { path: 'Schedule Class/List', component: ListComponent},
+
+
   // { path: '**', redirectTo: ''}
 ];
 

@@ -42,14 +42,14 @@ import { FormsModule } from '@angular/forms';
     StudentBannerComponent,
     CourseApprovalComponent,
 
-    ListComponent
+    ListComponent,
 
     CategoryComponent,
 
     EditCourseListComponent,
-    EditCourseListSecondComponent
+    EditCourseListSecondComponent,
 
-    CoursekitComponent
+    CoursekitComponent,
 
   ],
   imports: [
