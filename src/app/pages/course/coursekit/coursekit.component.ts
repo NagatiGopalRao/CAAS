@@ -59,9 +59,11 @@ toggleList() {
     this.fileDropEl.nativeElement.value = "";
   }
 
-  onSubmit() {
-    console.log(this.model);
-    this.listitems.push(this.model);
+  onSubmit(f: any) {
+    console.log(f.value);
+    const curr = f.value;
+    curr.selectopt = false;
+    this.listitems.push(curr);
     this.toggleList();
   }
 

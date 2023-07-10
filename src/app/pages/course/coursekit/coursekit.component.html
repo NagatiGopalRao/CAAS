@@ -20,11 +20,11 @@
     <div class="row"  *ngIf="!list">
         <div class="card text-start mt-3 p-5 rounded-5">
           <div class="container">
-            <form (ngSubmit)="onSubmit()" #coursekitForm="ngForm">
+            <form (ngSubmit)="onSubmit(coursekitForm)" #coursekitForm="ngForm">
                 <div class="row mb-3">
                     <div class="col-6">
                         <label for="" class="form-label">Course Name</label>
-                        <select class="form-select" aria-label="Default select example">
+                        <select name="coursename" ngModel class="form-select" aria-label="Default select example">
                             <option selected></option>
                             <option value="1">One</option>
                             <option value="2">Two</option>
@@ -33,26 +33,26 @@
                     </div>
                     <div class="col-6">
                         <label for="" class="form-label">Document Link</label>
-                        <input type="text"
+                        <input type="text" ngModel
                           class="form-control" name="dl" id="dl" placeholder="www.">
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col-6">
                         <label for="" class="form-label">Short Description</label>
-                        <input type="text"
-                          class="form-control" name="coursename" id="coursename" style="height: 108px">
+                        <input type="text" ngModel
+                          class="form-control" name="sd" id="coursename" style="height: 108px">
                     </div>
                     <div class="col-6">
                         <label for="" class="form-label">Long Description</label>
-                        <input type="text"
-                          class="form-control" name="dl" id="dl" style="height: 108px">
+                        <input type="text" ngModel
+                          class="form-control" name="ld" id="dl" style="height: 108px">
                     </div>
                 </div>
                 <div class="row mb-3">
                     <p>Video</p>
                     <div class="box p-3" appDnd (fileDropped)="onFileDropped($event)">
-                        <input type="file" #fileDropRef id="fileDropRef" (change)="fileBrowseHandler($event.target)">
+                        <input type="file" #fileDropRef id="fileDropRef" ngModel name="vltitle" (change)="fileBrowseHandler($event.target)">
                         <h4>Drag & Drop Video, or <label for="fileDropRef" style="background: none; color: #D64E49;">Browse</label></h4>
                         <p>Max 6 Mb each, 12 MB for Videos</p>
                     </div>
