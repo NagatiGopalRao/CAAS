@@ -1,0 +1,32 @@
+
+.btn-bg {
+    background-color: #FFAE3B;
+}
+
+.crt-color {
+    border: 1px solid #526D82;
+    color: #526D82;
+    font-size: 16px;
+    font-weight: 600;
+}
+.mt-5 {
+margin-top: 25px;
+}
+
+.submit {
+    background-color: #526D82;
+    color: #fff;
+}
+
+.top {
+    margin-top: 130px;
+}
+
+.table {
+    /* border: 2px solid #000; */
+    border-radius: 10%;
+}
+
+.table th, td{
+    padding: 20px;
+    }

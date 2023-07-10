@@ -1,8 +1,27 @@
 
+
+    <div class="wrapper">
+        <div class="shared-component">
+            <app-side-bar (newItemEvent)="setIsCollapsed($event)" class="sidebar-container"></app-side-bar>
+            <app-header class="app-header-container w-100"></app-header>
+        </div>
+        <div class="main-panel">
+            <div class="row">
+                <div class="col-md-10 offset-md-2 col-sm-12" [ngClass]="{ 'col-lg-8 offset-lg-4 offset-xl-3': !isSideBarcollapsed, 'col-lg-10 offset-lg-1': isSideBarcollapsed }" >
+                    <router-outlet></router-outlet>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+ <!-- <app-footer ></app-footer>  -->
+
+
 <!-- <div class="container-fluid text-center ">
- <div class="container-fluid text-center ">
  CAAS Works
 </div> -->
 <!-- <app-instructor-banner></app-instructor-banner> -->
 <!-- <app-course-approval></app-course-approval> -->
-<app-list></app-list>
+
+

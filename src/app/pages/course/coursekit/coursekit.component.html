@@ -1,0 +1,183 @@
+<div class="container-fluid bg-light" style="font-family: 'Nunito';">
+    <div class="container top">
+        <div class="row mt-5">
+            <div class="col-md-3">
+                <h1>Course Kit</h1>
+            </div>
+            <div class="col-md-3">
+                <input type="text" class="form-control mt-2" placeholder="Search">
+            </div>
+            <div class="col-md-3 col-xs-6 text-end mt-2">
+                <button id="toggle" class="bg-light-subtle btn
+                border-danger shadow px-4 rounded-3 py-2 fw-bold" (click)="toggleList()">{{list? 'Add' : 'List'}} Course Kit</button>
+            </div>
+            <div class="col-md-3 col-xs-6 text-end">
+                <button type="button"  class="btn btn-color mt-2 px-5 btn-bg text-white shadow" id="export">
+                   Export  <i class="fa fa-folder"></i>
+                  </button>
+            </div>
+        </div>
+    <div class="row"  *ngIf="!list">
+        <div class="card text-start mt-3 p-5 rounded-5">
+          <div class="container">
+            <form (ngSubmit)="onSubmit(coursekitForm)" #coursekitForm="ngForm">
+                <div class="row mb-3">
+                    <div class="col-6">
+                        <label for="" class="form-label">Course Name</label>
+                        <select name="coursename" ngModel class="form-select" aria-label="Default select example">
+                            <option selected></option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <div class="col-6">
+                        <label for="" class="form-label">Document Link</label>
+                        <input type="text" ngModel
+                          class="form-control" name="dl" id="dl" placeholder="www.">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-6">
+                        <label for="" class="form-label">Short Description</label>
+                        <input type="text" ngModel
+                          class="form-control" name="sd" id="coursename" style="height: 108px">
+                    </div>
+                    <div class="col-6">
+                        <label for="" class="form-label">Long Description</label>
+                        <input type="text" ngModel
+                          class="form-control" name="ld" id="dl" style="height: 108px">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <p>Video</p>
+                    <div class="box p-3" appDnd (fileDropped)="onFileDropped($event)">
+                        <input type="file" #fileDropRef id="fileDropRef" ngModel name="vltitle" (change)="fileBrowseHandler($event.target)">
+                        <h4>Drag & Drop Video, or <label for="fileDropRef" style="background: none; color: #D64E49;">Browse</label></h4>
+                        <p>Max 6 Mb each, 12 MB for Videos</p>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-6">
+                        <button id="back">Back</button>
+                    </div>
+                    <div class="col-6 text-end">
+                        <button id="submit">Submit</button>
+                    </div>
+                </div>
+            </form>
+          </div>
+        </div>
+    </div>
+    <div class="row" *ngIf="list">
+        <div class="card shadow  bg-body mt-3">
+            <div class="card-body p-0 m-0 rounded-6">
+              <div class="tbl-container bdr">
+                <div class="table-responsive">
+                  <table class="table" style="font-size: 13px;">
+                    <thead class="table-secondary">
+                      <tr>
+                        <th scope="col" *ngFor="let header of headeritems">{{header}}</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let item of listitems; index as index">
+                        <td>{{item.coursename}}</td>
+                        <td>{{item.sd}}</td>
+                        <td>{{item.ld}}</td>
+                        <td>
+                            <div class="vl-container" style="border: 0.3px solid #7A7A7A; border-radius: 20px; width: 184px; padding: 10px; min-height: 40px;">
+                                <p style="display: inline;">{{item.vltitle}}</p>
+                                <img style="display: inline; float: right;" src="/assets/video-icon.svg" alt="">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="dl-container" style="border: 0.3px solid #7A7A7A; border-radius: 20px; width: 224px; padding: 10px; min-height: 40px;">
+                                <a href="{{item.dl}}">{{item.dl}}</a>
+                                <img src="/assets/Link.svg" alt="" style="float: right;">
+                            </div>
+                        </td>
+                        <td><button class="rounded-circle border-0 py-1 px-2" [ngStyle]="{'background':item.selectopt? '#D64E49' : '#EFEEEE'}"><img class="mb-1"
+                              src="/assets/course/ellipses.svg" [ngStyle]="{'filter':item.selectopt? 'invert(100%)' : 'none'}" alt="ellipses" (click)="selectoption(item)"></button>
+                              <div class="option">
+                                <div class="dropdown" *ngIf="item.selectopt">
+                                    <div class="tab" (click)="toggleEdit(item)" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        <img src="/assets/pencil.svg" alt="pencil">
+                                        <p>Edit</p>
+                                    </div>
+                                    <div class="tab" (click)="deleteItem(index)">
+                                        <img src="/assets/delete.svg" alt="delete">
+                                        <p>Delete</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="Edit Course Kit" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-lg">
+                                  <div class="modal-content rounded-4 p-4">
+                                    <div class="modal-header">
+                                        <h3 class="modal-title" id="exampleModalLabel">Edit Course Kit</h3>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                      </div>
+                                    <div class="modal-body">
+                                        <div class="container">
+                                            <form>
+                                                <div class="row mb-3">
+                                                    <div class="col-6">
+                                                        <label for="" class="form-label">Course Name</label>
+                                                        <select class="form-select" aria-label="Default select example">
+                                                            <option selected></option>
+                                                            <option value="1">One</option>
+                                                            <option value="2">Two</option>
+                                                            <option value="3">Three</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <label for="" class="form-label">Document Link</label>
+                                                        <input type="text"
+                                                          class="form-control" name="dl" id="dl" placeholder="www.">
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-3">
+                                                    <div class="col-6">
+                                                        <label for="" class="form-label">Short Description</label>
+                                                        <input type="text" style="height: 108px"
+                                                          class="form-control" name="coursename" id="coursename">
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <label for="" class="form-label">Long Description</label>
+                                                        <input type="text" style="height: 108px"
+                                                          class="form-control" name="dl" id="dl">
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-3">
+                                                    <p>Video</p>
+                                                    <div class="box p-3" appDnd (fileDropped)="onFileDropped($event)">
+                                                        <input type="file" #fileDropRef id="fileDropRef" (change)="fileBrowseHandler($event.target)">
+                                                        <h4>Drag & Drop Video, or <label for="fileDropRef" style="background: none; color: #D64E49;">Browse</label></h4>
+                                                        <p>Max 6 Mb each, 12 MB for Videos</p>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-3">
+                                                    <div class="col-6">
+                                                        <button id="back">Back</button>
+                                                    </div>
+                                                    <div class="col-6 text-end">
+                                                        <button id="submit">Submit</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                          </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+    </div>
+</div>
+</div>

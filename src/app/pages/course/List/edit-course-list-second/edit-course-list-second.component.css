@@ -1,0 +1,154 @@
+.row {
+    margin-top: 10px;
+  }
+  
+  #parent {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: -15px;
+    margin-top: 40px;
+  }
+  
+  img {
+    padding-left: 20px;
+  
+  }
+  
+  #child {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: -15px;
+    margin-top: 10px;
+  }
+  
+  p {
+    padding-left: 35px;
+    font: 'Nunito';
+    
+  }
+  label{
+    font: 'Nunito';
+    font-size: 20px;
+    font-weight: 500;
+  }
+  
+  input {
+    margin-top: 5px;
+    font: 'Nunito';
+    font-size: 16px;
+    font-weight: 400;
+  }
+  
+  .form-select {
+    margin-top: 10px;
+    font: 'Nunito';
+    font-size: 16px;
+    font-weight: 400;
+  }
+  
+  .col-11 {
+    border: 1.5px dashed #7A7A7A;
+    margin-top: 10px;
+    border-radius: 10px;
+    height: 220px;
+    border-radius: 16px;
+    background: #FFF;
+    text-align: center;
+  }
+  
+  .col-11 input {
+    opacity: 0;
+    z-index: 20;
+    height: 150px;
+    position: absolute;
+    top: 540px;
+    left: 480px;
+  }
+  
+  .col-11 h3 {
+    color: #252F40;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 20px;
+  }
+  
+  .col-11 p {
+    color: #252F40;
+    font-size: 12px;
+  }
+  select{
+    width: 98%;
+    background-color: #FFF;
+    background-image: url("/assets/drop-down.svg");
+    background-repeat: no-repeat;
+    background-position-x: 99%;
+    background-position-y: 10px;
+    background-size: auto;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+  }
+  button {
+    border: 0.3px solid #e1dfdf;
+    width: 95%;
+    height: 47px;
+    border-radius: 10px;
+    background-color: #FFF;
+    background-image: url("/assets/Attach.svg");
+    background-repeat: no-repeat;
+    background-position-x: 98%;
+    background-position-y: 10px;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+  }
+  
+  .button:hover {
+    background-color: white;
+  }
+  
+  #input {
+    display: block;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    margin-top: -3px;
+  }
+  
+  #submit {
+  
+    margin-bottom: 20px;
+    background: #526D82;
+    border: none;
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    color: #FFF;
+    font: 'Nunito';
+  }
+  
+  #cancel {
+  
+    margin-bottom: 20px;
+    background: #FFF;
+    border: 1px solid #000000;
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    color: black;
+    font: 'Nunito';
+  }
+  
+  #back {
+  
+    margin-bottom: 20px;
+    background: #FFF;
+    border: 1px solid #000000;
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    color: black;
+    font: 'Nunito';
+  }
