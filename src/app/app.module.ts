@@ -17,6 +17,7 @@ import { StudentBannerComponent } from './pages/Banner/student-banner/student-ba
 import { CourseApprovalComponent } from './pages/course/course-approval/course-approval.component';
 import { CategoryComponent } from './pages/course/category/category.component';
 import { CoursekitComponent } from './pages/course/coursekit/coursekit.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { CoursekitComponent } from './pages/course/coursekit/coursekit.component
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule, 
+    BrowserAnimationsModule,
+    FormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

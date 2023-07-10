@@ -1,27 +1,26 @@
 <div class="container-fluid bg-light" style="font-family: 'Nunito';">
     <div class="container top">
         <div class="row mt-5">
-            <div class="col-3">
+            <div class="col-md-3">
                 <h1>Course Kit</h1>
             </div>
-            <div class="col-3">
+            <div class="col-md-3">
                 <input type="text" class="form-control mt-2" placeholder="Search">
             </div>
-            <div class="col-3 text-end mt-2">
-                <button class="bg-light-subtle btn
+            <div class="col-md-3 col-xs-6 text-end mt-2">
+                <button id="toggle" class="bg-light-subtle btn
                 border-danger shadow px-4 rounded-3 py-2 fw-bold" (click)="toggleList()">{{list? 'Add' : 'List'}} Course Kit</button>
             </div>
-            <div class="col-3 d-flex justify-content-evenly">
+            <div class="col-md-3 col-xs-6 text-end">
                 <button type="button"  class="btn btn-color mt-2 px-5 btn-bg text-white shadow" id="export">
                    Export  <i class="fa fa-folder"></i>
                   </button>
             </div>
         </div>
-    </div>
     <div class="row"  *ngIf="!list">
         <div class="card text-start mt-3 p-5 rounded-5">
           <div class="container">
-            <form>
+            <form (ngSubmit)="onSubmit()" #coursekitForm="ngForm">
                 <div class="row mb-3">
                     <div class="col-6">
                         <label for="" class="form-label">Course Name</label>
@@ -71,7 +70,7 @@
         </div>
     </div>
     <div class="row" *ngIf="list">
-        <div class="card shadow  bg-body mt-5">
+        <div class="card shadow  bg-body mt-3">
             <div class="card-body p-0 m-0 rounded-6">
               <div class="tbl-container bdr">
                 <div class="table-responsive">
@@ -82,20 +81,20 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr *ngFor="let item of listitems">
+                      <tr *ngFor="let item of listitems; index as index">
                         <td>{{item.coursename}}</td>
                         <td>{{item.sd}}</td>
                         <td>{{item.ld}}</td>
                         <td>
-                            <div class="dl-container" style="border: 0.3px solid #7A7A7A; border-radius: 20px; width: 224px; padding: 10px;">
-                                <a href="{{item.dl}}">{{item.dl}}</a>
-                                <img src="/assets/Link.svg" alt="" style="float: right;">
+                            <div class="vl-container" style="border: 0.3px solid #7A7A7A; border-radius: 20px; width: 184px; padding: 10px; min-height: 40px;">
+                                <p style="display: inline;">{{item.vltitle}}</p>
+                                <img style="display: inline; float: right;" src="/assets/video-icon.svg" alt="">
                             </div>
                         </td>
                         <td>
-                            <div class="vl-container" style="border: 0.3px solid #7A7A7A; border-radius: 20px; width: 184px; padding: 10px;">
-                                <p style="display: inline;">{{item.vltitle}}</p>
-                                <img style="display: inline; float: right;" src="/assets/video-icon.svg" alt="">
+                            <div class="dl-container" style="border: 0.3px solid #7A7A7A; border-radius: 20px; width: 224px; padding: 10px; min-height: 40px;">
+                                <a href="{{item.dl}}">{{item.dl}}</a>
+                                <img src="/assets/Link.svg" alt="" style="float: right;">
                             </div>
                         </td>
                         <td><button class="rounded-circle border-0 py-1 px-2" [ngStyle]="{'background':item.selectopt? '#D64E49' : '#EFEEEE'}"><img class="mb-1"
@@ -106,7 +105,7 @@
                                         <img src="/assets/pencil.svg" alt="pencil">
                                         <p>Edit</p>
                                     </div>
-                                    <div class="tab">
+                                    <div class="tab" (click)="deleteItem(index)">
                                         <img src="/assets/delete.svg" alt="delete">
                                         <p>Delete</p>
                                     </div>
@@ -180,4 +179,5 @@
               </div>
             </div>
     </div>
+</div>
 </div>

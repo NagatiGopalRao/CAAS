@@ -73,4 +73,8 @@ toggleList() {
   addCourseName(id: string) {
     this.model.coursename = id;
   }
+
+  deleteItem(i: number) {
+    this.listitems.splice(i, 1);
+  }
 }
