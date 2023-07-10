@@ -16,8 +16,13 @@ import { InstructorBannerComponent } from './pages/Banner/instructor-banner/inst
 import { StudentBannerComponent } from './pages/Banner/student-banner/student-banner.component';
 import { CourseApprovalComponent } from './pages/course/course-approval/course-approval.component';
 import { CategoryComponent } from './pages/course/category/category.component';
+<<<<<<< HEAD
 import { EditCourseListComponent } from './pages/course/List/edit-course-list/edit-course-list.component';
 import { EditCourseListSecondComponent } from './pages/course/List/edit-course-list-second/edit-course-list-second.component';
+=======
+import { CoursekitComponent } from './pages/course/coursekit/coursekit.component';
+import { FormsModule } from '@angular/forms';
+>>>>>>> 369f73e1bbb530032ccfbc08b4a1d6458f4e6ed9
 
 @NgModule({
   declarations: [
@@ -34,13 +39,18 @@ import { EditCourseListSecondComponent } from './pages/course/List/edit-course-l
     StudentBannerComponent,
     CourseApprovalComponent,
     CategoryComponent,
+<<<<<<< HEAD
     EditCourseListComponent,
     EditCourseListSecondComponent
+=======
+    CoursekitComponent
+>>>>>>> 369f73e1bbb530032ccfbc08b4a1d6458f4e6ed9
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule, 
+    BrowserAnimationsModule,
+    FormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
