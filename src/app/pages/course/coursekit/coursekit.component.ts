@@ -67,9 +67,12 @@ toggleList() {
     this.toggleList();
   }
 
-  onEdit() {
-    console.log(this.model);
-    this.toggleEdit(this.model);
+  onEdit(f: any, i: number) {
+    console.log(f.value);
+    const newItem = f.value;
+    newItem.selectopt = false;
+    this.listitems[i] = newItem;
+    this.toggleEdit(newItem);
   }
 
   addCourseName(id: string) {
