@@ -15,9 +15,17 @@ import { ProfileBannerComponent } from './pages/Banner/profile-banner/profile-ba
 import { InstructorBannerComponent } from './pages/Banner/instructor-banner/instructor-banner.component';
 import { StudentBannerComponent } from './pages/Banner/student-banner/student-banner.component';
 import { CourseApprovalComponent } from './pages/course/course-approval/course-approval.component';
+
+import { ListComponent } from './pages/Scheduleclass/list/list.component';
+
 import { CategoryComponent } from './pages/course/category/category.component';
+
+import { EditCourseListComponent } from './pages/course/List/edit-course-list/edit-course-list.component';
+import { EditCourseListSecondComponent } from './pages/course/List/edit-course-list-second/edit-course-list-second.component';
+
 import { CoursekitComponent } from './pages/course/coursekit/coursekit.component';
 import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -33,8 +41,16 @@ import { FormsModule } from '@angular/forms';
     InstructorBannerComponent,
     StudentBannerComponent,
     CourseApprovalComponent,
+
+    ListComponent,
+
     CategoryComponent,
-    CoursekitComponent
+
+    EditCourseListComponent,
+    EditCourseListSecondComponent,
+
+    CoursekitComponent,
+
   ],
   imports: [
     BrowserModule,
